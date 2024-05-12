@@ -5,7 +5,7 @@
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 75px;
+  scroll-padding-top: 50px;
 }
 
 a {
@@ -62,7 +62,7 @@ header {
   bottom: 0;
   left: 0;
   width: 0;
-  background-color: var(--secondary-color);
+  background-color: var(--main-color);
   height: 2px;
   transition: var(--main-transition);
 }
