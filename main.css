@@ -18,6 +18,7 @@ a {
   --secondary-color: #ffffff;
   --section-bg-color: #f7f7f7;
   --light-gray: #999;
+  --light-gray-bg: #f7f7f7;
   --dark-gray: #748182;
   --font-poppins: "Poppins", sans-serif;
   --font-montserrat: "Montserrat", sans-serif;
@@ -138,7 +139,8 @@ header {
   z-index: -1;
 }
 
-.section-header {
+.section-header,
+.about-head {
   font-family: var(--font-montserrat);
   font-weight: 800;
   font-size: 45px;
@@ -282,17 +284,22 @@ header {
   height: 2px;
   transition: var(--main-transition);
 }
+figure {
+  margin: 0;
+}
 
 .portfolio-item {
+  cursor: pointer;
   overflow: hidden;
   transition: var(--main-transition);
 }
 
 .figure-layer {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
   opacity: 0;
   transition: var(--main-transition);
   background-color: var(--secondary-color);
@@ -304,8 +311,8 @@ figcaption {
 /* .portfolio-item:hover figcaption {
 } */
 .portfolio-item:hover .figure-layer {
-  opacity: 1;
-  border: 5px solid var(--light-gray);
+  opacity: 0.8;
+  /* border: 5px solid var(--light-gray); */
 }
 
 figcaption h6 {
@@ -321,7 +328,7 @@ figcaption h6 {
 }
 
 .portfolio-item:hover figcaption h6 {
-  top: 30%;
+  top: 35%;
   opacity: 1;
 }
 
@@ -331,7 +338,7 @@ figcaption h6 {
   transition: var(--main-transition);
 }
 .portfolio-item:hover .figure-icons {
-  bottom: 30%;
+  bottom: 35%;
 }
 .figure-icons span {
   background-color: var(--main-color);
@@ -348,19 +355,10 @@ figcaption h6 {
   color: var(--main-color);
   cursor: pointer;
 }
-/* .portfolio-item{
-  position: relative;
+
+/* testimonials */
+
+.testimonials {
+  background-color: var(--light-gray-bg);
+  padding: 50px 30px;
 }
-.figure-layer{
-  position: absolute;
-} */
-/* @media (min-width: 768px) {
-  .container {
-    max-Width: 90%;
-  }
-}
-@media (min-width: 576px) {
-    .container, .container-sm {
-        max-width: 90%;
-    }
-} */
