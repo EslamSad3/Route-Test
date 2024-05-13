@@ -390,3 +390,92 @@ figcaption h6 {
   border-radius: 50%;
   background-color: var(--dark-gray);
 }
+
+/* Counter */
+
+.counter {
+  padding: 100px 30px;
+}
+.counter .icon {
+  font-size: 40px;
+}
+
+.counter p {
+  font-family: var(--font-poppins);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--light-gray);
+}
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.downloaded,
+.customers,
+.projects,
+.code {
+  counter-reset: num var(--num);
+  font: 800 40px system-ui;
+  padding: 2rem;
+}
+.downloaded {
+  animation: downloaded 2s forwards alternate ease-in-out;
+  /* animation-timeline: scroll(); */
+}
+.customers {
+  animation: customers 2s forwards alternate ease-in-out;
+}
+.projects {
+  animation: projects 2s forwards alternate ease-in-out;
+}
+.code {
+  animation: code 2s forwards alternate ease-in-out;
+}
+
+.downloaded::after {
+  content: counter(num);
+}
+.customers::after {
+  content: counter(num);
+}
+.projects::after {
+  content: counter(num);
+}
+.code::after {
+  content: counter(num);
+}
+
+@keyframes downloaded {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 780;
+  }
+}
+@keyframes customers {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 850;
+  }
+}
+@keyframes projects {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 230;
+  }
+}
+@keyframes code {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 9450;
+  }
+}
