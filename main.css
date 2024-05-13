@@ -23,6 +23,7 @@ a {
   --font-poppins: "Poppins", sans-serif;
   --font-montserrat: "Montserrat", sans-serif;
   --main-transition: all ease-in-out 0.5s;
+  --card-bg: #5b5b5b;
   --box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.05);
 }
 
@@ -358,7 +359,8 @@ figcaption h6 {
 
 /* testimonials */
 
-.testimonials {
+.testimonials,
+.team {
   background-color: var(--light-gray-bg);
   padding: 100px 30px;
 }
@@ -406,6 +408,55 @@ figcaption h6 {
   font-size: 15px;
   color: var(--light-gray);
 }
+
+/* Team */
+.team-item {
+  background-color: var(--card-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.team-item .layer {
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  right: 5px;
+  left: 5px;
+  background-color: var(--secondary-color);
+  /* height: 65%; */
+  opacity: 0;
+  transform: rotateY(180deg);
+  z-index: 9999;
+  transition: var(--main-transition);
+}
+
+.team-item:hover .layer {
+  transform: rotateY(360deg);
+  opacity: 0.9;
+}
+.team-item .layer .team-icon .icon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--main-color);
+  transition: var(--main-transition);
+  color: var(--secondary-color);
+  background-color: var(--main-color);
+}
+
+.team-item .layer .team-icon .icon:hover {
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+img {
+  transition: var(--main-transition);
+}
+.wrapper:hover img {
+  scale: 1.09;
+}
+
+/* Counter animation */
 @property --num {
   syntax: "<integer>";
   initial-value: 0;
