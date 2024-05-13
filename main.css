@@ -456,6 +456,29 @@ img {
   scale: 1.09;
 }
 
+/* Contact */
+.contact {
+  padding: 100px 30px;
+}
+
+.contact .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  font-size: 30px;
+  border-radius: 50%;
+  background-color: var(--light-gray-bg);
+  color: var(--main-color);
+  transition: var(--main-transition);
+}
+
+.contact .icon:hover {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+}
+
 /* Counter animation */
 @property --num {
   syntax: "<integer>";
