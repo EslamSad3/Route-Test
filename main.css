@@ -478,6 +478,14 @@ img {
   background-color: var(--main-color);
   color: var(--secondary-color);
 }
+.form-control {
+  background: #f4f4f4;
+  padding: 15px;
+}
+.form-control:focus {
+  box-shadow: none;
+  background: #f4f4f4;
+}
 
 /* Counter animation */
 @property --num {
